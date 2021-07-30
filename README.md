@@ -1,8 +1,12 @@
-1. `git clone https://github.com/MerlinRdev/bcmhnd-toolchains`
+1. `git clone https://github.com/SWRT-dev/bcmhnd-toolchains`
 
 2. `cd bcmhnd-toolchains`
 
 3. `sudo mkdir -p /opt/toolchains/`
+
+    `sudo ln -sf $(pwd)/crosstools-aarch64-gcc-5.3-linux-4.1-glibc-2.22-binutils-2.25 /opt/toolchains/`
+
+    `sudo ln -sf $(pwd)/crosstools-arm-gcc-5.3-linux-4.1-glibc-2.22-binutils-2.25 /opt/toolchains/`
 
     `sudo ln -sf $(pwd)/crosstools-aarch64-gcc-5.3-linux-4.1-glibc-2.24-binutils-2.25 /opt/toolchains/`
     
@@ -28,4 +32,4 @@
     
     `sudo ln -sf $(pwd)/fwtag.ini /projects/bca/tools/linux/bin/`
     
-    `sudo ln -sf /projects/bca/ /projects/hnd/`
+    `sudo ln -sf /projects/bca /projects/hnd`
