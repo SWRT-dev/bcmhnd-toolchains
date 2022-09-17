@@ -35,7 +35,7 @@ LANGUAGE=C;	export LANGUAGE
 LC_ALL=C;	export LC_ALL
 LC_CTYPE=C;	export LC_CTYPE
 
-prefix="/opt/toolchains/crosstools-arm-gcc-9.2-linux-4.19-glibc-2.30-binutils-2.32"
+prefix="/home/defjovi/temp3/toolchain/crosstools-arm-gcc-9.2-linux-4.19-glibc-2.30-binutils-2.32"
 exec_prefix="${prefix}"
 
 bindir="${exec_prefix}/bin"
@@ -99,7 +99,7 @@ while test $# -gt 0; do
 		;;
 	# compile/link
 	--cflags)
-		INCS=" -D_GNU_SOURCE"
+		INCS=" -D_GNU_SOURCE -D_DEFAULT_SOURCE"
 		if test "xno" = xno ; then
 			INCS="$INCS -I${includesubdir}"
 		fi
@@ -119,11 +119,11 @@ ENDECHO
 		fi
 		if test ncurses = ncurses ; then
 		sed -e 's,^[ ]*,,' -e 's, [ ]*, ,g' -e 's,[ ]*$,,' <<-ENDECHO
-			$LIBDIR -Wl,-rpath,/opt/toolchains/crosstools-arm-gcc-9.2-linux-4.19-glibc-2.30-binutils-2.32/lib  -l${THIS} 
+			$LIBDIR -Wl,-rpath,/home/defjovi/temp3/toolchain/crosstools-arm-gcc-9.2-linux-4.19-glibc-2.30-binutils-2.32/lib  -l${THIS} 
 ENDECHO
 		else
 		sed -e 's,^[ ]*,,' -e 's, [ ]*, ,g' -e 's,[ ]*$,,' <<-ENDECHO
-			$LIBDIR -Wl,-rpath,/opt/toolchains/crosstools-arm-gcc-9.2-linux-4.19-glibc-2.30-binutils-2.32/lib  -l${THIS} -l${TINFO_LIB} 
+			$LIBDIR -Wl,-rpath,/home/defjovi/temp3/toolchain/crosstools-arm-gcc-9.2-linux-4.19-glibc-2.30-binutils-2.32/lib  -l${THIS} -l${TINFO_LIB} 
 ENDECHO
 		fi
 		;;
@@ -163,7 +163,7 @@ ENDECHO
 		echo "/usr/share/terminfo"
 		;;
 	--terminfo-dirs)
-		echo "/opt/toolchains/crosstools-arm-gcc-9.2-linux-4.19-glibc-2.30-binutils-2.32/share/terminfo"
+		echo "/home/defjovi/temp3/toolchain/crosstools-arm-gcc-9.2-linux-4.19-glibc-2.30-binutils-2.32/share/terminfo"
 		;;
 	--termpath)
 		echo ""

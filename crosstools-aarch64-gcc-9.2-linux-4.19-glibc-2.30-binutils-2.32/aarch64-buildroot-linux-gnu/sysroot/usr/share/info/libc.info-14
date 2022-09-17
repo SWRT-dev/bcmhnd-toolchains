@@ -1,7 +1,24 @@
-This is
-/opt/toolchains/toolbuild/src/buildroot-2019.11.1/output/build/glibc-2.30-20-g50f20fe506abb8853641006a7b90a81af21d7b91/build/manual/libc.info,
-produced by makeinfo version 4.13 from libc.texinfo.
+This is libc.info, produced by makeinfo version 5.2 from libc.texinfo.
 
+This file documents the GNU C Library.
+
+   This is ‘The GNU C Library Reference Manual’, for version 2.30
+(Buildroot).
+
+   Copyright © 1993–2019 Free Software Foundation, Inc.
+
+   Permission is granted to copy, distribute and/or modify this document
+under the terms of the GNU Free Documentation License, Version 1.3 or
+any later version published by the Free Software Foundation; with the
+Invariant Sections being “Free Software Needs Free Documentation” and
+“GNU Lesser General Public License”, the Front-Cover texts being “A GNU
+Manual”, and with the Back-Cover Texts as in (a) below.  A copy of the
+license is included in the section entitled "GNU Free Documentation
+License".
+
+   (a) The FSF’s Back-Cover Text is: “You have the freedom to copy and
+modify this GNU manual.  Buying copies from the FSF supports it in
+developing GNU and promoting software freedom.”
 INFO-DIR-SECTION Software libraries
 START-INFO-DIR-ENTRY
 * Libc: (libc).                 C library.
@@ -2067,377 +2084,381 @@ START-INFO-DIR-ENTRY
 * ynl: (libc)Special Functions.
 END-INFO-DIR-ENTRY
 
-   This file documents the GNU C Library.
-
-   This is `The GNU C Library Reference Manual', for version 2.30
-(Buildroot).
-
-   Copyright (C) 1993-2019 Free Software Foundation, Inc.
-
-   Permission is granted to copy, distribute and/or modify this document
-under the terms of the GNU Free Documentation License, Version
-1.3 or any later version published by the Free Software Foundation;
-with the Invariant Sections being "Free Software Needs Free
-Documentation" and "GNU Lesser General Public License", the Front-Cover
-texts being "A GNU Manual", and with the Back-Cover Texts as in (a)
-below.  A copy of the license is included in the section entitled "GNU
-Free Documentation License".
-
-   (a) The FSF's Back-Cover Text is: "You have the freedom to copy and
-modify this GNU manual.  Buying copies from the FSF supports it in
-developing GNU and promoting software freedom."
-
 
-File: libc.info,  Node: File Index,  Prev: Variable Index,  Up: Top
+File: libc.info,  Node: Installation,  Next: Maintenance,  Prev: Library Summary,  Up: Top
 
-Program and File Index
-**********************
+Appendix C Installing the GNU C Library
+***************************************
 
- [index ]
+Before you do anything else, you should read the FAQ at
+<https://sourceware.org/glibc/wiki/FAQ>.  It answers common questions
+and describes problems you may experience with compilation and
+installation.
+
+   You will need recent versions of several GNU tools: definitely GCC
+and GNU Make, and possibly others.  *Note Tools for Compilation::,
+below.
+
 * Menu:
 
-* /etc/group:                            Group Database.      (line   6)
-* /etc/hosts:                            Host Names.          (line  13)
-* /etc/localtime:                        TZ Variable.         (line 136)
-* /etc/networks:                         Networks Database.   (line   6)
-* /etc/passwd:                           User Database.       (line   6)
-* /etc/protocols:                        Protocols Database.  (line  19)
-* /etc/services:                         Services Database.   (line   6)
-* /usr/share/zoneinfo:                   TZ Variable.         (line 144)
-* argp.h:                                Argp.                (line  25)
-* argz.h:                                Argz Functions.      (line  24)
-* arpa/inet.h:                           Host Address Functions.
-                                                              (line   6)
-* assert.h:                              Consistency Checking.
-                                                              (line  11)
-* cd:                                    Working Directory.   (line  18)
-* chgrp:                                 File Owner.          (line  27)
-* chown:                                 File Owner.          (line  27)
-* complex.h <1>:                         Operations on Complex.
-                                                              (line   6)
-* complex.h <2>:                         Complex Numbers.     (line   6)
-* complex.h:                             Mathematics.         (line   9)
-* ctype.h <1>:                           Case Conversion.     (line  21)
-* ctype.h <2>:                           Classification of Characters.
-                                                              (line  25)
-* ctype.h:                               Character Handling.  (line   9)
-* dirent.h <1>:                          Random Access Directory.
-                                                              (line   6)
-* dirent.h <2>:                          Reading/Closing Directory.
-                                                              (line   6)
-* dirent.h <3>:                          Opening a Directory. (line   6)
-* dirent.h <4>:                          Directory Entries.   (line   6)
-* dirent.h:                              Reserved Names.      (line  80)
-* envz.h:                                Envz Functions.      (line  26)
-* errno.h <1>:                           Error Codes.         (line   6)
-* errno.h <2>:                           Checking for Errors. (line  12)
-* errno.h:                               Error Reporting.     (line  13)
-* execinfo.h:                            Backtraces.          (line  13)
-* fcntl.h <1>:                           Interrupt Input.     (line  20)
-* fcntl.h <2>:                           File Locks.          (line  39)
-* fcntl.h <3>:                           File Status Flags.   (line  27)
-* fcntl.h <4>:                           Descriptor Flags.    (line  16)
-* fcntl.h <5>:                           Duplicating Descriptors.
-                                                              (line  20)
-* fcntl.h <6>:                           Control Operations.  (line  15)
-* fcntl.h <7>:                           Opening and Closing Files.
-                                                              (line   8)
-* fcntl.h:                               Reserved Names.      (line  83)
-* fcntl.h.:                              Open File Description Locks.
-                                                              (line  56)
-* float.h:                               Floating Point Parameters.
-                                                              (line   6)
-* fnmatch.h:                             Wildcard Matching.   (line   6)
-* gcc:                                   ISO C.               (line  15)
-* gconv.h:                               glibc iconv Implementation.
-                                                              (line 203)
-* grp.h <1>:                             Group Data Structure.
-                                                              (line   7)
-* grp.h <2>:                             Setting Groups.      (line  76)
-* grp.h:                                 Reserved Names.      (line  85)
-* hostid:                                Host Identification. (line  50)
-* hostname:                              Host Identification. (line  50)
-* iconv.h:                               Generic Conversion Interface.
-                                                              (line  80)
-* kill:                                  Termination Signals. (line  27)
-* ksh:                                   Wildcard Matching.   (line  71)
-* langinfo.h:                            The Elegant and Fast Way.
-                                                              (line  26)
-* limits.h <1>:                          Width of Type.       (line   6)
-* limits.h <2>:                          Limits for Files.    (line  14)
-* limits.h <3>:                          General Limits.      (line  13)
-* limits.h <4>:                          Selecting the Conversion.
-                                                              (line  22)
-* limits.h:                              Reserved Names.      (line  87)
-* locale:                                Locale Names.        (line   8)
-* locale.h <1>:                          The Lame Way to Locale Data.
-                                                              (line  13)
-* locale.h:                              Setting the Locale.  (line  21)
-* localtime:                             TZ Variable.         (line 136)
-* ls:                                    File Attributes.     (line   6)
-* malloc.h <1>:                          Statistics of Malloc.
-                                                              (line   9)
-* malloc.h <2>:                          Hooks for Malloc.    (line  11)
-* malloc.h:                              Malloc Tunable Parameters.
-                                                              (line   8)
-* math.h <1>:                            Rounding Functions.  (line   6)
-* math.h <2>:                            Normalization Functions.
-                                                              (line  14)
-* math.h <3>:                            Absolute Value.      (line  12)
-* math.h <4>:                            Floating Point Classes.
-                                                              (line   6)
-* math.h:                                Mathematics.         (line   9)
-* mcheck.h:                              Heap Consistency Checking.
-                                                              (line   8)
-* mkdir:                                 Creating Directories.
-                                                              (line   6)
-* netdb.h <1>:                           Networks Database.   (line   6)
-* netdb.h <2>:                           Protocols Database.  (line  27)
-* netdb.h <3>:                           Services Database.   (line   9)
-* netdb.h:                               Host Names.          (line  13)
-* netinet/in.h <1>:                      Byte Order.          (line  33)
-* netinet/in.h <2>:                      Ports.               (line  35)
-* netinet/in.h <3>:                      Host Address Data Type.
-                                                              (line  23)
-* netinet/in.h:                          Internet Address Formats.
-                                                              (line  13)
-* obstack.h:                             Creating Obstacks.   (line   7)
-* printf.h <1>:                          Conversion Specifier Options.
-                                                              (line  13)
-* printf.h:                              Registering New Conversions.
-                                                              (line   7)
-* pt_chown:                              Configuring and compiling.
-                                                              (line 174)
-* pwd.h <1>:                             User Data Structure. (line   7)
-* pwd.h:                                 Reserved Names.      (line  89)
-* setjmp.h <1>:                          Non-Local Exits and Signals.
-                                                              (line  18)
-* setjmp.h:                              Non-Local Details.   (line   8)
-* sh:                                    Running a Command.   (line  12)
-* signal.h <1>:                          BSD Signal Handling. (line  18)
-* signal.h <2>:                          Checking for Pending Signals.
-                                                              (line   7)
-* signal.h <3>:                          Process Signal Mask. (line  12)
-* signal.h <4>:                          Signal Sets.         (line  11)
-* signal.h <5>:                          Signaling Another Process.
-                                                              (line  24)
-* signal.h <6>:                          Signaling Yourself.  (line   7)
-* signal.h <7>:                          Flags for Sigaction. (line  23)
-* signal.h <8>:                          Advanced Signal Handling.
-                                                              (line  12)
-* signal.h <9>:                          Basic Signal Handling.
-                                                              (line   8)
-* signal.h <10>:                         Standard Signals.    (line   6)
-* signal.h:                              Reserved Names.      (line  92)
-* stdarg.h <1>:                          Argument Macros.     (line   7)
-* stdarg.h:                              Receiving Arguments. (line  10)
-* stddef.h:                              Important Data Types.
-                                                              (line  11)
-* stdint.h:                              Integers.            (line  23)
-* stdio.h <1>:                           Who Logged In.       (line  14)
-* stdio.h <2>:                           Identifying the Terminal.
-                                                              (line  13)
-* stdio.h <3>:                           Signal Messages.     (line  45)
-* stdio.h <4>:                           Temporary Files.     (line  17)
-* stdio.h <5>:                           Deleting Files.      (line  82)
-* stdio.h <6>:                           Descriptors and Streams.
-                                                              (line   9)
-* stdio.h <7>:                           Streams and Cookies. (line  25)
-* stdio.h <8>:                           String Streams.      (line   7)
-* stdio.h <9>:                           Controlling Buffering.
-                                                              (line  11)
-* stdio.h <10>:                          Flushing Buffers.    (line  23)
-* stdio.h <11>:                          Portable Positioning.
-                                                              (line  50)
-* stdio.h <12>:                          File Positioning.    (line  19)
-* stdio.h <13>:                          Formatted Input Functions.
-                                                              (line   7)
-* stdio.h <14>:                          Variable Arguments Output.
-                                                              (line  52)
-* stdio.h <15>:                          Formatted Output Functions.
-                                                              (line  11)
-* stdio.h <16>:                          Block Input/Output.  (line  25)
-* stdio.h <17>:                          Character Input.     (line   8)
-* stdio.h <18>:                          Simple Output.       (line  10)
-* stdio.h <19>:                          Opening Streams.     (line  10)
-* stdio.h <20>:                          Standard Streams.    (line  11)
-* stdio.h:                               Streams.             (line  14)
-* stdlib.h <1>:                          Running a Command.   (line  33)
-* stdlib.h <2>:                          Aborting a Program.  (line   7)
-* stdlib.h <3>:                          Exit Status.         (line  43)
-* stdlib.h <4>:                          Environment Access.  (line   7)
-* stdlib.h <5>:                          Printing of Floats.  (line   6)
-* stdlib.h <6>:                          Parsing of Floats.   (line   6)
-* stdlib.h <7>:                          Parsing of Integers. (line   6)
-* stdlib.h <8>:                          Absolute Value.      (line  12)
-* stdlib.h <9>:                          Integer Division.    (line  16)
-* stdlib.h <10>:                         SVID Random.         (line  31)
-* stdlib.h <11>:                         BSD Random.          (line  10)
-* stdlib.h <12>:                         ISO Random.          (line  10)
-* stdlib.h <13>:                         Allocation.          (line   6)
-* stdlib.h <14>:                         Temporary Files.     (line 157)
-* stdlib.h <15>:                         Array Sort Function. (line   7)
-* stdlib.h <16>:                         Array Search Function.
-                                                              (line  51)
-* stdlib.h <17>:                         Non-reentrant Character Conversion.
-                                                              (line 104)
-* stdlib.h <18>:                         Selecting the Conversion.
-                                                              (line  31)
-* stdlib.h <19>:                         Variable Size Automatic.
-                                                              (line  16)
-* stdlib.h <20>:                         Aligned Memory Blocks.
-                                                              (line   6)
-* stdlib.h <21>:                         Allocating Cleared Space.
-                                                              (line   7)
-* stdlib.h <22>:                         Changing Block Size. (line  13)
-* stdlib.h <23>:                         Freeing after Malloc.
-                                                              (line   8)
-* stdlib.h:                              Basic Allocation.    (line   7)
-* string.h <1>:                          Signal Messages.     (line  25)
-* string.h <2>:                          Finding Tokens in a String.
-                                                              (line   9)
-* string.h <3>:                          Search Functions.    (line   8)
-* string.h <4>:                          Collation Functions. (line  18)
-* string.h <5>:                          String/Array Comparison.
-                                                              (line  22)
-* string.h <6>:                          Concatenating Strings.
-                                                              (line   6)
-* string.h <7>:                          Copying Strings and Arrays.
-                                                              (line   9)
-* string.h:                              String Length.       (line   7)
-* sys/param.h:                           Host Identification. (line  74)
-* sys/resource.h <1>:                    Traditional Scheduling Functions.
-                                                              (line   6)
-* sys/resource.h <2>:                    Limits on Resources. (line  26)
-* sys/resource.h:                        Resource Usage.      (line   6)
-* sys/socket.h <1>:                      Socket-Level Options.
-                                                              (line  11)
-* sys/socket.h <2>:                      Socket Option Functions.
-                                                              (line   6)
-* sys/socket.h <3>:                      Sending Datagrams.   (line   6)
-* sys/socket.h <4>:                      Socket Data Options. (line   6)
-* sys/socket.h <5>:                      Receiving Data.      (line   6)
-* sys/socket.h <6>:                      Sending Data.        (line   6)
-* sys/socket.h <7>:                      Socket Pairs.        (line   6)
-* sys/socket.h <8>:                      Closing a Socket.    (line  13)
-* sys/socket.h <9>:                      Creating a Socket.   (line   7)
-* sys/socket.h <10>:                     Internet Namespace.  (line  18)
-* sys/socket.h <11>:                     Local Namespace Details.
-                                                              (line   6)
-* sys/socket.h <12>:                     Reading Address.     (line   6)
-* sys/socket.h <13>:                     Setting Address.     (line   6)
-* sys/socket.h <14>:                     Address Formats.     (line  20)
-* sys/socket.h:                          Communication Styles.
-                                                              (line   9)
-* sys/stat.h <1>:                        FIFO Special Files.  (line  17)
-* sys/stat.h <2>:                        Making Special Files.
-                                                              (line  10)
-* sys/stat.h <3>:                        Setting Permissions. (line  41)
-* sys/stat.h <4>:                        Permission Bits.     (line  13)
-* sys/stat.h <5>:                        Testing File Type.   (line  21)
-* sys/stat.h <6>:                        Attribute Meanings.  (line  12)
-* sys/stat.h <7>:                        Creating Directories.
-                                                              (line  50)
-* sys/stat.h:                            Reserved Names.      (line  95)
-* sys/time.h <1>:                        Setting an Alarm.    (line  51)
-* sys/time.h <2>:                        High-Resolution Calendar.
-                                                              (line  12)
-* sys/time.h:                            File Times.          (line  97)
-* sys/times.h <1>:                       Processor Time.      (line   9)
-* sys/times.h:                           Reserved Names.      (line  97)
-* sys/timex.h:                           High Accuracy Clock. (line   6)
-* sys/types.h <1>:                       Setting Groups.      (line   8)
-* sys/types.h <2>:                       Setting User ID.     (line   8)
-* sys/types.h <3>:                       Reading Persona.     (line   9)
-* sys/types.h <4>:                       Terminal Access Functions.
-                                                              (line   8)
-* sys/types.h <5>:                       Process Group Functions.
-                                                              (line   8)
-* sys/types.h <6>:                       Process Identification.
-                                                              (line  35)
-* sys/types.h:                           Waiting for I/O.     (line  23)
-* sys/un.h:                              Local Namespace Details.
-                                                              (line  22)
-* sys/utsname.h:                         Platform Type.       (line   8)
-* sys/vlimit.h:                          Limits on Resources. (line 227)
-* sys/vtimes.h:                          Resource Usage.      (line 105)
-* sys/wait.h <1>:                        BSD Wait Functions.  (line   9)
-* sys/wait.h <2>:                        Process Completion Status.
-                                                              (line  10)
-* sys/wait.h:                            Process Completion.  (line   8)
-* termios.h <1>:                         Terminal Modes.      (line   6)
-* termios.h:                             Reserved Names.      (line 101)
-* threads.h:                             ISO C Threads.       (line   6)
-* time.h <1>:                            TZ Variable.         (line   9)
-* time.h <2>:                            Formatting Calendar Time.
-                                                              (line   7)
-* time.h <3>:                            Simple Calendar Time.
-                                                              (line   8)
-* time.h <4>:                            CPU Time.            (line   7)
-* time.h:                                File Times.          (line  14)
-* ulimit.h:                              Limits on Resources. (line 187)
-* umask:                                 Setting Permissions. (line  29)
-* unistd.h <1>:                          Options for Files.   (line  13)
-* unistd.h <2>:                          System Options.      (line  11)
-* unistd.h <3>:                          Host Identification. (line  50)
-* unistd.h <4>:                          Who Logged In.       (line  14)
-* unistd.h <5>:                          Setting Groups.      (line   8)
-* unistd.h <6>:                          Setting User ID.     (line   8)
-* unistd.h <7>:                          Reading Persona.     (line   9)
-* unistd.h <8>:                          Terminal Access Functions.
-                                                              (line   8)
-* unistd.h <9>:                          Process Group Functions.
-                                                              (line   8)
-* unistd.h <10>:                         Executing a File.    (line  13)
-* unistd.h <11>:                         Creating a Process.  (line   7)
-* unistd.h <12>:                         Process Identification.
-                                                              (line  35)
-* unistd.h <13>:                         Termination Internals.
-                                                              (line   7)
-* unistd.h <14>:                         Using Getopt.        (line   7)
-* unistd.h <15>:                         Setting an Alarm.    (line  51)
-* unistd.h <16>:                         Is It a Terminal.    (line  10)
-* unistd.h <17>:                         Creating a Pipe.     (line  14)
-* unistd.h <18>:                         Testing File Access. (line  39)
-* unistd.h <19>:                         File Owner.          (line  31)
-* unistd.h <20>:                         Deleting Files.      (line  22)
-* unistd.h <21>:                         Symbolic Links.      (line  43)
-* unistd.h <22>:                         Hard Links.          (line  25)
-* unistd.h <23>:                         Working Directory.   (line  21)
-* unistd.h <24>:                         Duplicating Descriptors.
-                                                              (line  20)
-* unistd.h <25>:                         Descriptors and Streams.
-                                                              (line  60)
-* unistd.h <26>:                         I/O Primitives.      (line   8)
-* unistd.h:                              Opening and Closing Files.
-                                                              (line   8)
-* utime.h:                               File Times.          (line  36)
-* utmp.h <1>:                            Logging In and Out.  (line   7)
-* utmp.h:                                Manipulating the Database.
-                                                              (line   7)
-* utmpx.h:                               XPG Functions.       (line   7)
-* wchar.h <1>:                           Parsing of Integers. (line   6)
-* wchar.h <2>:                           Character Input.     (line   8)
-* wchar.h <3>:                           Simple Output.       (line  10)
-* wchar.h <4>:                           Converting Strings.  (line  49)
-* wchar.h <5>:                           Converting a Character.
-                                                              (line  32)
-* wchar.h <6>:                           Keeping the state.   (line  19)
-* wchar.h <7>:                           Extended Char Intro. (line  96)
-* wchar.h <8>:                           Collation Functions. (line  18)
-* wchar.h <9>:                           Concatenating Strings.
-                                                              (line   6)
-* wchar.h:                               Copying Strings and Arrays.
-                                                              (line   9)
-* wctype.h <1>:                          Wide Character Case Conversion.
-                                                              (line  17)
-* wctype.h:                              Classification of Wide Characters.
-                                                              (line  34)
-* zoneinfo:                              TZ Variable.         (line 144)
-
-
+* Configuring and compiling::   How to compile and test GNU libc.
+* Running make install::        How to install it once you’ve got it
+ compiled.
+* Tools for Compilation::       You’ll need these first.
+* Linux::                       Specific advice for GNU/Linux systems.
+* Reporting Bugs::              So they’ll get fixed.
 
 
-Local Variables:
-coding: utf-8
-End:
+File: libc.info,  Node: Configuring and compiling,  Next: Running make install,  Up: Installation
+
+C.1 Configuring and compiling the GNU C Library
+===============================================
+
+The GNU C Library cannot be compiled in the source directory.  You must
+build it in a separate build directory.  For example, if you have
+unpacked the GNU C Library sources in ‘/src/gnu/glibc-VERSION’, create a
+directory ‘/src/gnu/glibc-build’ to put the object files in.  This
+allows removing the whole build directory in case an error occurs, which
+is the safest way to get a fresh start and should always be done.
+
+   From your object directory, run the shell script ‘configure’ located
+at the top level of the source tree.  In the scenario above, you’d type
+
+     $ ../glibc-VERSION/configure ARGS…
+
+   Please note that even though you’re building in a separate build
+directory, the compilation may need to create or modify files and
+directories in the source directory.
+
+‘configure’ takes many options, but the only one that is usually
+mandatory is ‘--prefix’.  This option tells ‘configure’ where you want
+the GNU C Library installed.  This defaults to ‘/usr/local’, but the
+normal setting to install as the standard system library is
+‘--prefix=/usr’ for GNU/Linux systems and ‘--prefix=’ (an empty prefix)
+for GNU/Hurd systems.
+
+   It may also be useful to pass ‘CC=COMPILER’ and ‘CFLAGS=FLAGS’
+arguments to ‘configure’.  ‘CC’ selects the C compiler that will be
+used, and ‘CFLAGS’ sets optimization options for the compiler.  Any
+compiler options required for all compilations, such as options
+selecting an ABI or a processor for which to generate code, should be
+included in ‘CC’.  Options that may be overridden by the GNU C Library
+build system for particular files, such as for optimization and
+debugging, should go in ‘CFLAGS’.  The default value of ‘CFLAGS’ is ‘-g
+-O2’, and the GNU C Library cannot be compiled without optimization, so
+if ‘CFLAGS’ is specified it must enable optimization.  For example:
+
+     $ ../glibc-VERSION/configure CC="gcc -m32" CFLAGS="-O3"
+
+   The following list describes all of the available options for
+‘configure’:
+
+‘--prefix=DIRECTORY’
+     Install machine-independent data files in subdirectories of
+     ‘DIRECTORY’.  The default is to install in ‘/usr/local’.
+
+‘--exec-prefix=DIRECTORY’
+     Install the library and other machine-dependent files in
+     subdirectories of ‘DIRECTORY’.  The default is to the ‘--prefix’
+     directory if that option is specified, or ‘/usr/local’ otherwise.
+
+‘--with-headers=DIRECTORY’
+     Look for kernel header files in DIRECTORY, not ‘/usr/include’.  The
+     GNU C Library needs information from the kernel’s header files
+     describing the interface to the kernel.  The GNU C Library will
+     normally look in ‘/usr/include’ for them, but if you specify this
+     option, it will look in DIRECTORY instead.
+
+     This option is primarily of use on a system where the headers in
+     ‘/usr/include’ come from an older version of the GNU C Library.
+     Conflicts can occasionally happen in this case.  You can also use
+     this option if you want to compile the GNU C Library with a newer
+     set of kernel headers than the ones found in ‘/usr/include’.
+
+‘--enable-kernel=VERSION’
+     This option is currently only useful on GNU/Linux systems.  The
+     VERSION parameter should have the form X.Y.Z and describes the
+     smallest version of the Linux kernel the generated library is
+     expected to support.  The higher the VERSION number is, the less
+     compatibility code is added, and the faster the code gets.
+
+‘--with-binutils=DIRECTORY’
+     Use the binutils (assembler and linker) in ‘DIRECTORY’, not the
+     ones the C compiler would default to.  You can use this option if
+     the default binutils on your system cannot deal with all the
+     constructs in the GNU C Library.  In that case, ‘configure’ will
+     detect the problem and suppress these constructs, so that the
+     library will still be usable, but functionality may be lost—for
+     example, you can’t build a shared libc with old binutils.
+
+‘--with-nonshared-cflags=CFLAGS’
+     Use additional compiler flags CFLAGS to build the parts of the
+     library which are always statically linked into applications and
+     libraries even with shared linking (that is, the object files
+     contained in ‘lib*_nonshared.a’ libraries).  The build process will
+     automatically use the appropriate flags, but this option can be
+     used to set additional flags required for building applications and
+     libraries, to match local policy.  For example, if such a policy
+     requires that all code linked into applications must be built with
+     source fortification,
+     ‘--with-nonshared-cflags=-Wp,-D_FORTIFY_SOURCE=2’ will make sure
+     that the objects in ‘libc_nonshared.a’ are compiled with this flag
+     (although this will not affect the generated code in this
+     particular case and potentially change debugging information and
+     metadata only).
+
+‘--disable-shared’
+     Don’t build shared libraries even if it is possible.  Not all
+     systems support shared libraries; you need ELF support and
+     (currently) the GNU linker.
+
+‘--enable-static-pie’
+     Enable static position independent executable (static PIE) support.
+     Static PIE is similar to static executable, but can be loaded at
+     any address without help from a dynamic linker.  All static
+     programs as well as static tests are built as static PIE, except
+     for those marked with no-pie.  The resulting glibc can be used with
+     the GCC option, -static-pie, which is available with GCC 8 or
+     above, to create static PIE. This option also implies that glibc
+     programs and tests are created as dynamic position independent
+     executables (PIE) by default.
+
+‘--enable-cet’
+     Enable Intel Control-flow Enforcement Technology (CET) support.
+     When the GNU C Library is built with ‘--enable-cet’, the resulting
+     library is protected with indirect branch tracking (IBT) and shadow
+     stack (SHSTK).  When CET is enabled, the GNU C Library is
+     compatible with all existing executables and shared libraries.
+     This feature is currently supported on i386, x86_64 and x32 with
+     GCC 8 and binutils 2.29 or later.  Note that when CET is enabled,
+     the GNU C Library requires CPUs capable of multi-byte NOPs, like
+     x86-64 processors as well as Intel Pentium Pro or newer.
+
+     NOTE: ‘--enable-cet’ has been tested for i686, x86_64 and x32 on
+     non-CET processors.  ‘--enable-cet’ has been tested for x86_64 and
+     x32 on CET SDVs, but Intel CET support hasn’t been validated for
+     i686.
+
+‘--disable-profile’
+     Don’t build libraries with profiling information.  You may want to
+     use this option if you don’t plan to do profiling.
+
+‘--enable-static-nss’
+     Compile static versions of the NSS (Name Service Switch) libraries.
+     This is not recommended because it defeats the purpose of NSS; a
+     program linked statically with the NSS libraries cannot be
+     dynamically reconfigured to use a different name database.
+
+‘--enable-hardcoded-path-in-tests’
+     By default, dynamic tests are linked to run with the installed C
+     library.  This option hardcodes the newly built C library path in
+     dynamic tests so that they can be invoked directly.
+
+‘--disable-timezone-tools’
+     By default, timezone related utilities (‘zic’, ‘zdump’, and
+     ‘tzselect’) are installed with the GNU C Library.  If you are
+     building these independently (e.g.  by using the ‘tzcode’ package),
+     then this option will allow disabling the install of these.
+
+     Note that you need to make sure the external tools are kept in sync
+     with the versions that the GNU C Library expects as the data
+     formats may change over time.  Consult the ‘timezone’ subdirectory
+     for more details.
+
+‘--enable-stack-protector’
+‘--enable-stack-protector=strong’
+‘--enable-stack-protector=all’
+     Compile the C library and all other parts of the glibc package
+     (including the threading and math libraries, NSS modules, and
+     transliteration modules) using the GCC ‘-fstack-protector’,
+     ‘-fstack-protector-strong’ or ‘-fstack-protector-all’ options to
+     detect stack overruns.  Only the dynamic linker and a small number
+     of routines called directly from assembler are excluded from this
+     protection.
+
+‘--enable-bind-now’
+     Disable lazy binding for installed shared objects and programs.
+     This provides additional security hardening because it enables full
+     RELRO and a read-only global offset table (GOT), at the cost of
+     slightly increased program load times.
+
+‘--enable-pt_chown’
+     The file ‘pt_chown’ is a helper binary for ‘grantpt’ (*note
+     Pseudo-Terminals: Allocation.) that is installed setuid root to fix
+     up pseudo-terminal ownership.  It is not built by default because
+     systems using the Linux kernel are commonly built with the ‘devpts’
+     filesystem enabled and mounted at ‘/dev/pts’, which manages
+     pseudo-terminal ownership automatically.  By using
+     ‘--enable-pt_chown’, you may build ‘pt_chown’ and install it setuid
+     and owned by ‘root’.  The use of ‘pt_chown’ introduces additional
+     security risks to the system and you should enable it only if you
+     understand and accept those risks.
+
+‘--disable-werror’
+     By default, the GNU C Library is built with ‘-Werror’.  If you wish
+     to build without this option (for example, if building with a newer
+     version of GCC than this version of the GNU C Library was tested
+     with, so new warnings cause the build with ‘-Werror’ to fail), you
+     can configure with ‘--disable-werror’.
+
+‘--disable-mathvec’
+     By default for x86_64, the GNU C Library is built with the vector
+     math library.  Use this option to disable the vector math library.
+
+‘--enable-tunables’
+     Tunables support allows additional library parameters to be
+     customized at runtime.  This feature is enabled by default.  This
+     option can take the following values:
+
+     ‘yes’
+          This is the default if no option is passed to configure.  This
+          enables tunables and selects the default frontend (currently
+          ‘valstring’).
+
+     ‘no’
+          This option disables tunables.
+
+     ‘valstring’
+          This enables tunables and selects the ‘valstring’ frontend for
+          tunables.  This frontend allows users to specify tunables as a
+          colon-separated list in a single environment variable
+          ‘GLIBC_TUNABLES’.
+
+‘--enable-obsolete-nsl’
+     By default, libnsl is only built as shared library for backward
+     compatibility and the NSS modules libnss_compat, libnss_nis and
+     libnss_nisplus are not built at all.  Use this option to enable
+     libnsl with all depending NSS modules and header files.  For
+     architectures and ABIs that have been added after version 2.28 of
+     the GNU C Library this option is not available, and the libnsl
+     compatibility library is not built.
+
+‘--disable-crypt’
+     Do not install the passphrase-hashing library ‘libcrypt’ or the
+     header file ‘crypt.h’.  ‘unistd.h’ will still declare the function
+     ‘crypt’.  Using this option does not change the set of programs
+     that may need to be linked with ‘-lcrypt’; it only means that the
+     GNU C Library will not provide that library.
+
+     This option is for hackers and distributions experimenting with
+     independently-maintained implementations of libcrypt.  It may
+     become the default in a future release.
+
+‘--disable-experimental-malloc’
+     By default, a per-thread cache is enabled in ‘malloc’.  While this
+     cache can be disabled on a per-application basis using tunables
+     (set glibc.malloc.tcache_count to zero), this option can be used to
+     remove it from the build completely.
+
+‘--build=BUILD-SYSTEM’
+‘--host=HOST-SYSTEM’
+     These options are for cross-compiling.  If you specify both options
+     and BUILD-SYSTEM is different from HOST-SYSTEM, ‘configure’ will
+     prepare to cross-compile the GNU C Library from BUILD-SYSTEM to be
+     used on HOST-SYSTEM.  You’ll probably need the ‘--with-headers’
+     option too, and you may have to override CONFIGURE’s selection of
+     the compiler and/or binutils.
+
+     If you only specify ‘--host’, ‘configure’ will prepare for a native
+     compile but use what you specify instead of guessing what your
+     system is.  This is most useful to change the CPU submodel.  For
+     example, if ‘configure’ guesses your machine as ‘i686-pc-linux-gnu’
+     but you want to compile a library for 586es, give
+     ‘--host=i586-pc-linux-gnu’ or just ‘--host=i586-linux’ and add the
+     appropriate compiler flags (‘-mcpu=i586’ will do the trick) to
+     ‘CC’.
+
+     If you specify just ‘--build’, ‘configure’ will get confused.
+
+‘--with-pkgversion=VERSION’
+     Specify a description, possibly including a build number or build
+     date, of the binaries being built, to be included in ‘--version’
+     output from programs installed with the GNU C Library.  For
+     example, ‘--with-pkgversion='FooBar GNU/Linux glibc build 123'’.
+     The default value is ‘GNU libc’.
+
+‘--with-bugurl=URL’
+     Specify the URL that users should visit if they wish to report a
+     bug, to be included in ‘--help’ output from programs installed with
+     the GNU C Library.  The default value refers to the main
+     bug-reporting information for the GNU C Library.
+
+   To build the library and related programs, type ‘make’.  This will
+produce a lot of output, some of which may look like errors from ‘make’
+but aren’t.  Look for error messages from ‘make’ containing ‘***’.
+Those indicate that something is seriously wrong.
+
+   The compilation process can take a long time, depending on the
+configuration and the speed of your machine.  Some complex modules may
+take a very long time to compile, as much as several minutes on slower
+machines.  Do not panic if the compiler appears to hang.
+
+   If you want to run a parallel make, simply pass the ‘-j’ option with
+an appropriate numeric parameter to ‘make’.  You need a recent GNU
+‘make’ version, though.
+
+   To build and run test programs which exercise some of the library
+facilities, type ‘make check’.  If it does not complete successfully, do
+not use the built library, and report a bug after verifying that the
+problem is not already known.  *Note Reporting Bugs::, for instructions
+on reporting bugs.  Note that some of the tests assume they are not
+being run by ‘root’.  We recommend you compile and test the GNU C
+Library as an unprivileged user.
+
+   Before reporting bugs make sure there is no problem with your system.
+The tests (and later installation) use some pre-existing files of the
+system such as ‘/etc/passwd’, ‘/etc/nsswitch.conf’ and others.  These
+files must all contain correct and sensible content.
+
+   Normally, ‘make check’ will run all the tests before reporting all
+problems found and exiting with error status if any problems occurred.
+You can specify ‘stop-on-test-failure=y’ when running ‘make check’ to
+make the test run stop and exit with an error status immediately when a
+failure occurs.
+
+   To format the ‘GNU C Library Reference Manual’ for printing, type
+‘make dvi’.  You need a working TeX installation to do this.  The
+distribution builds the on-line formatted version of the manual, as Info
+files, as part of the build process.  You can build them manually with
+‘make info’.
+
+   The library has a number of special-purpose configuration parameters
+which you can find in ‘Makeconfig’.  These can be overwritten with the
+file ‘configparms’.  To change them, create a ‘configparms’ in your
+build directory and add values as appropriate for your system.  The file
+is included and parsed by ‘make’ and has to follow the conventions for
+makefiles.
+
+   It is easy to configure the GNU C Library for cross-compilation by
+setting a few variables in ‘configparms’.  Set ‘CC’ to the
+cross-compiler for the target you configured the library for; it is
+important to use this same ‘CC’ value when running ‘configure’, like
+this: ‘configure TARGET CC=TARGET-gcc’.  Set ‘BUILD_CC’ to the compiler
+to use for programs run on the build system as part of compiling the
+library.  You may need to set ‘AR’ to cross-compiling versions of ‘ar’
+if the native tools are not configured to work with object files for the
+target you configured for.  When cross-compiling the GNU C Library, it
+may be tested using ‘make check
+test-wrapper="SRCDIR/scripts/cross-test-ssh.sh HOSTNAME"’, where SRCDIR
+is the absolute directory name for the main source directory and
+HOSTNAME is the host name of a system that can run the newly built
+binaries of the GNU C Library.  The source and build directories must be
+visible at the same locations on both the build system and HOSTNAME.
+
+   In general, when testing the GNU C Library, ‘test-wrapper’ may be set
+to the name and arguments of any program to run newly built binaries.
+This program must preserve the arguments to the binary being run, its
+working directory and the standard input, output and error file
+descriptors.  If ‘TEST-WRAPPER env’ will not work to run a program with
+environment variables set, then ‘test-wrapper-env’ must be set to a
+program that runs a newly built program with environment variable
+assignments in effect, those assignments being specified as ‘VAR=VALUE’
+before the name of the program to be run.  If multiple assignments to
+the same variable are specified, the last assignment specified must take
+precedence.  Similarly, if ‘TEST-WRAPPER env -i’ will not work to run a
+program with an environment completely empty of variables except those
+directly assigned, then ‘test-wrapper-env-only’ must be set; its use has
+the same syntax as ‘test-wrapper-env’, the only difference in its
+semantics being starting with an empty set of environment variables
+rather than the ambient set.
+

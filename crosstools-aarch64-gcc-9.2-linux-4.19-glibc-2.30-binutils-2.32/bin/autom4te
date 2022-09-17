@@ -1,8 +1,8 @@
-#! /usr/local/bin/perl -w
+#! /usr/bin/perl -w
 # -*- perl -*-
 # Generated from autom4te.in; do not edit by hand.
 
-eval 'case $# in 0) exec /usr/local/bin/perl -S "$0";; *) exec /usr/local/bin/perl -S "$0" "$@";; esac'
+eval 'case $# in 0) exec /usr/bin/perl -S "$0";; *) exec /usr/bin/perl -S "$0" "$@";; esac'
     if 0;
 
 # autom4te - Wrapper around M4 libraries.
@@ -24,7 +24,7 @@ eval 'case $# in 0) exec /usr/local/bin/perl -S "$0";; *) exec /usr/local/bin/pe
 
 BEGIN
 {
-  my $pkgdatadir = $ENV{'autom4te_perllibdir'} || '/opt/toolchains/crosstools-aarch64-gcc-9.2-linux-4.19-glibc-2.30-binutils-2.32/share/autoconf';
+  my $pkgdatadir = $ENV{'autom4te_perllibdir'} || '/home/defjovi/temp3/toolchain/crosstools-aarch64-gcc-9.2-linux-4.19-glibc-2.30-binutils-2.32/share/autoconf';
   unshift @INC, $pkgdatadir;
 
   # Override SHELL.  On DJGPP SHELL may not be set to a shell
@@ -44,7 +44,7 @@ use File::Basename;
 use strict;
 
 # Data directory.
-my $pkgdatadir = $ENV{'AC_MACRODIR'} || '/opt/toolchains/crosstools-aarch64-gcc-9.2-linux-4.19-glibc-2.30-binutils-2.32/share/autoconf';
+my $pkgdatadir = $ENV{'AC_MACRODIR'} || '/home/defjovi/temp3/toolchain/crosstools-aarch64-gcc-9.2-linux-4.19-glibc-2.30-binutils-2.32/share/autoconf';
 
 # $LANGUAGE{LANGUAGE} -- Automatic options for LANGUAGE.
 my %language;
@@ -87,7 +87,7 @@ my @include;
 my $freeze = 0;
 
 # $M4.
-my $m4 = $ENV{"M4"} || '/opt/toolchains/crosstools-aarch64-gcc-9.2-linux-4.19-glibc-2.30-binutils-2.32/bin/m4';
+my $m4 = $ENV{"M4"} || '/home/defjovi/temp3/toolchain/crosstools-aarch64-gcc-9.2-linux-4.19-glibc-2.30-binutils-2.32/bin/m4';
 # Some non-GNU m4's don't reject the --help option, so give them /dev/null.
 fatal "need GNU m4 1.4 or later: $m4"
   if system "$m4 --help </dev/null 2>&1 | grep reload-state >/dev/null";

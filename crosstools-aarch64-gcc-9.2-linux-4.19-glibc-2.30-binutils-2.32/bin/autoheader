@@ -1,8 +1,8 @@
-#! /usr/local/bin/perl
+#! /usr/bin/perl
 # -*- Perl -*-
 # Generated from autoheader.in; do not edit by hand.
 
-eval 'case $# in 0) exec /usr/local/bin/perl -S "$0";; *) exec /usr/local/bin/perl -S "$0" "$@";; esac'
+eval 'case $# in 0) exec /usr/bin/perl -S "$0";; *) exec /usr/bin/perl -S "$0" "$@";; esac'
     if 0;
 
 # autoheader -- create `config.h.in' from `configure.ac'
@@ -28,7 +28,7 @@ eval 'case $# in 0) exec /usr/local/bin/perl -S "$0";; *) exec /usr/local/bin/pe
 
 BEGIN
 {
-  my $pkgdatadir = $ENV{'autom4te_perllibdir'} || '/opt/toolchains/crosstools-aarch64-gcc-9.2-linux-4.19-glibc-2.30-binutils-2.32/share/autoconf';
+  my $pkgdatadir = $ENV{'autom4te_perllibdir'} || '/home/defjovi/temp3/toolchain/crosstools-aarch64-gcc-9.2-linux-4.19-glibc-2.30-binutils-2.32/share/autoconf';
   unshift @INC, "$pkgdatadir";
 
   # Override SHELL.  On DJGPP SHELL may not be set to a shell
@@ -50,7 +50,7 @@ use strict;
 use vars qw ($config_h %verbatim %symbol);
 
 # Lib files.
-my $autom4te = $ENV{'AUTOM4TE'} || '/opt/toolchains/crosstools-aarch64-gcc-9.2-linux-4.19-glibc-2.30-binutils-2.32/bin/autom4te';
+my $autom4te = $ENV{'AUTOM4TE'} || '/home/defjovi/temp3/toolchain/crosstools-aarch64-gcc-9.2-linux-4.19-glibc-2.30-binutils-2.32/bin/autom4te';
 local $config_h;
 my $config_h_in;
 my @prepend_include;

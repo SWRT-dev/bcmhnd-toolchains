@@ -100,7 +100,7 @@ func_find_prefixes ()
   done
 }
 if test "no" = yes; then
-  prefix="/opt/toolchains/crosstools-arm-gcc-9.2-linux-4.19-glibc-2.30-binutils-2.32"
+  prefix="/home/defjovi/temp3/toolchain/crosstools-arm-gcc-9.2-linux-4.19-glibc-2.30-binutils-2.32"
   exec_prefix="${prefix}"
   bindir="${exec_prefix}/bin"
   orig_installdir="$bindir" # see Makefile.am's *_SCRIPTS variables
@@ -117,7 +117,7 @@ else
   }
 fi
 
-prefix=/opt/toolchains/crosstools-arm-gcc-9.2-linux-4.19-glibc-2.30-binutils-2.32
+prefix=/home/defjovi/temp3/toolchain/crosstools-arm-gcc-9.2-linux-4.19-glibc-2.30-binutils-2.32
 exec_prefix=${prefix}
 bindir=`relocate "${exec_prefix}/bin"`
 exec "$bindir/bison" -y "$@"

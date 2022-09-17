@@ -1,8 +1,8 @@
-#!/usr/local/bin/perl -w
+#!/usr/bin/perl -w
 # -*- perl -*-
 # Generated from bin/aclocal.in; do not edit by hand.
 
-eval 'case $# in 0) exec /usr/local/bin/perl -S "$0";; *) exec /usr/local/bin/perl -S "$0" "$@";; esac'
+eval 'case $# in 0) exec /usr/bin/perl -S "$0";; *) exec /usr/bin/perl -S "$0" "$@";; esac'
     if 0;
 
 # aclocal - create aclocal.m4 by scanning configure.ac
@@ -27,7 +27,7 @@ eval 'case $# in 0) exec /usr/local/bin/perl -S "$0";; *) exec /usr/local/bin/pe
 
 BEGIN
 {
-  @Aclocal::perl_libdirs = ('/opt/toolchains/crosstools-aarch64-gcc-9.2-linux-4.19-glibc-2.30-binutils-2.32/share/automake-1.15')
+  @Aclocal::perl_libdirs = ('/home/defjovi/temp3/toolchain/crosstools-aarch64-gcc-9.2-linux-4.19-glibc-2.30-binutils-2.32/share/automake-1.15')
     unless @Aclocal::perl_libdirs;
   unshift @INC, @Aclocal::perl_libdirs;
 }
@@ -69,8 +69,8 @@ $perl_threads = 0;
 # ACLOCAL_PATH environment variable, and reset with the '--system-acdir'
 # option.
 my @user_includes = ();
-my @automake_includes = ("/opt/toolchains/crosstools-aarch64-gcc-9.2-linux-4.19-glibc-2.30-binutils-2.32/share/aclocal-$APIVERSION");
-my @system_includes = ('/opt/toolchains/crosstools-aarch64-gcc-9.2-linux-4.19-glibc-2.30-binutils-2.32/share/aclocal');
+my @automake_includes = ("/home/defjovi/temp3/toolchain/crosstools-aarch64-gcc-9.2-linux-4.19-glibc-2.30-binutils-2.32/share/aclocal-$APIVERSION");
+my @system_includes = ('/home/defjovi/temp3/toolchain/crosstools-aarch64-gcc-9.2-linux-4.19-glibc-2.30-binutils-2.32/share/aclocal');
 
 # Whether we should copy M4 file in $user_includes[0].
 my $install = 0;

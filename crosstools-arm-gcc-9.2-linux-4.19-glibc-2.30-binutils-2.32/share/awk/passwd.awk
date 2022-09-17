@@ -7,7 +7,7 @@
 
 BEGIN {
     # tailor this to suit your system
-    _pw_awklib = "/opt/toolchains/crosstools-arm-gcc-9.2-linux-4.19-glibc-2.30-binutils-2.32/libexec/awk/"
+    _pw_awklib = "/home/defjovi/temp3/toolchain/crosstools-arm-gcc-9.2-linux-4.19-glibc-2.30-binutils-2.32/libexec/awk/"
 }
 
 function _pw_init(    oldfs, oldrs, olddol0, pwcat, using_fw, using_fpat)

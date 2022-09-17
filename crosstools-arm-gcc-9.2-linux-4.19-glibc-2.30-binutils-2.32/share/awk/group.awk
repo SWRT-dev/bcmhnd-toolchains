@@ -7,7 +7,7 @@
 
 BEGIN {
     # Change to suit your system
-    _gr_awklib = "/opt/toolchains/crosstools-arm-gcc-9.2-linux-4.19-glibc-2.30-binutils-2.32/libexec/awk/"
+    _gr_awklib = "/home/defjovi/temp3/toolchain/crosstools-arm-gcc-9.2-linux-4.19-glibc-2.30-binutils-2.32/libexec/awk/"
 }
 
 function _gr_init(    oldfs, oldrs, olddol0, grcat,

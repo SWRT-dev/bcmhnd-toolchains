@@ -1947,7 +1947,7 @@
 
 /* Define if int64_t uses long as underlying type. */
 #ifndef USED_FOR_TARGET
-#define INT64_T_IS_LONG 1
+/* #undef INT64_T_IS_LONG */
 #endif
 
 
@@ -2099,7 +2099,7 @@
 
 /* The size of `long', as computed by sizeof. */
 #ifndef USED_FOR_TARGET
-#define SIZEOF_LONG 8
+#define SIZEOF_LONG 4
 #endif
 
 
@@ -2117,7 +2117,7 @@
 
 /* The size of `void *', as computed by sizeof. */
 #ifndef USED_FOR_TARGET
-#define SIZEOF_VOID_P 8
+#define SIZEOF_VOID_P 4
 #endif
 
 
@@ -2261,7 +2261,7 @@
 
 /* Number of bits in a file offset, on hosts where this is settable. */
 #ifndef USED_FOR_TARGET
-/* #undef _FILE_OFFSET_BITS */
+#define _FILE_OFFSET_BITS 64
 #endif
 
 

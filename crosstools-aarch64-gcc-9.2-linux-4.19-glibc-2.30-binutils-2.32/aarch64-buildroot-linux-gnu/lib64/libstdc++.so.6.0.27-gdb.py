@@ -19,8 +19,8 @@ import gdb
 import os
 import os.path
 
-pythondir = '/opt/toolchains/crosstools-aarch64-gcc-9.2-linux-4.19-glibc-2.30-binutils-2.32/share/gcc-9.2.0/python'
-libdir = '/opt/toolchains/crosstools-aarch64-gcc-9.2-linux-4.19-glibc-2.30-binutils-2.32/aarch64-buildroot-linux-gnu/lib/../lib64'
+pythondir = '/home/defjovi/temp3/toolchain/crosstools-aarch64-gcc-9.2-linux-4.19-glibc-2.30-binutils-2.32/share/gcc-9.2.0/python'
+libdir = '/home/defjovi/temp3/toolchain/crosstools-aarch64-gcc-9.2-linux-4.19-glibc-2.30-binutils-2.32/aarch64-buildroot-linux-gnu/lib/../lib64'
 
 # This file might be loaded when there is no current objfile.  This
 # can happen if the user loads it manually.  In this case we don't

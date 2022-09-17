@@ -32,7 +32,7 @@ our $PACKAGE = 'automake';
 our $PACKAGE_BUGREPORT = 'bug-automake@gnu.org';
 our $VERSION = '1.15.1';
 our $RELEASE_YEAR = '2017';
-our $libdir = '/opt/toolchains/crosstools-arm-gcc-9.2-linux-4.19-glibc-2.30-binutils-2.32/share/automake-1.15';
+our $libdir = '/home/defjovi/temp3/toolchain/crosstools-arm-gcc-9.2-linux-4.19-glibc-2.30-binutils-2.32/share/automake-1.15';
 
 our $perl_threads = 0;
 # We need at least this version for CLONE support.

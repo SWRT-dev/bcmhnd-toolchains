@@ -1,4 +1,4 @@
-prefix=/opt/toolchains/crosstools-aarch64-gcc-9.2-linux-4.19-glibc-2.30-binutils-2.32
+prefix=/home/defjovi/temp3/toolchain/crosstools-aarch64-gcc-9.2-linux-4.19-glibc-2.30-binutils-2.32
 exec_prefix=${prefix}
 libdir=${exec_prefix}/lib
 sharedlibdir=${libdir}

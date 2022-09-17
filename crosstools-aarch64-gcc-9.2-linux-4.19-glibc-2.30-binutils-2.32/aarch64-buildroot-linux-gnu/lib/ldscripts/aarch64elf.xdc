@@ -7,7 +7,7 @@ OUTPUT_FORMAT("elf64-littleaarch64", "elf64-bigaarch64",
 	      "elf64-littleaarch64")
 OUTPUT_ARCH(aarch64)
 ENTRY(_start)
-SEARCH_DIR("=/opt/toolchains/crosstools-aarch64-gcc-9.2-linux-4.19-glibc-2.30-binutils-2.32/aarch64-buildroot-linux-gnu/lib");
+SEARCH_DIR("=/home/defjovi/temp3/toolchain/crosstools-aarch64-gcc-9.2-linux-4.19-glibc-2.30-binutils-2.32/aarch64-buildroot-linux-gnu/lib");
 SECTIONS
 {
   /* Read-only sections, merged into text segment: */

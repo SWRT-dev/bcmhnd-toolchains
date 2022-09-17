@@ -42,11 +42,11 @@
 
 : ${AUTOCONF="autoconf"}
 : ${AUTOMAKE="automake"}
-: ${EGREP="/tools/bin/grep -E"}
-: ${FGREP="/tools/bin/grep -F"}
-: ${GREP="/tools/bin/grep"}
+: ${EGREP="/bin/grep -E"}
+: ${FGREP="/bin/grep -F"}
+: ${GREP="/bin/grep"}
 : ${LN_S="ln -s"}
-: ${SED="/tools/bin/sed"}
+: ${SED="/bin/sed"}
 
 
 ## -------------------------- ##
@@ -2502,7 +2502,7 @@ You must 'cd' to the top directory of your package before you run
 When reporting a bug, please describe a test case to reproduce it and
 include the following information:
 
-       host-triplet:   x86_64-pc-linux-gnu
+       host-triplet:   i686-pc-linux-gnu
        version:        $progname (GNU libtool) 2.4.6
        automake:       `($AUTOMAKE --version) 2>/dev/null |$SED 1q`
        autoconf:       `($AUTOCONF --version) 2>/dev/null |$SED 1q`
@@ -4290,11 +4290,11 @@ func_require_seen_libtool ()
   pkgmacro_files="libtool.m4 ltargz.m4 ltdl.m4 ltoptions.m4 ltsugar.m4 ltversion.m4 lt~obsolete.m4"
 
   # Locations for important files:
-  prefix="/opt/toolchains/crosstools-arm-gcc-9.2-linux-4.19-glibc-2.30-binutils-2.32"
-  datadir="/opt/toolchains/crosstools-arm-gcc-9.2-linux-4.19-glibc-2.30-binutils-2.32/share"
-  pkgauxdir="/opt/toolchains/crosstools-arm-gcc-9.2-linux-4.19-glibc-2.30-binutils-2.32/share/libtool/build-aux"
-  pkgltdldir="/opt/toolchains/crosstools-arm-gcc-9.2-linux-4.19-glibc-2.30-binutils-2.32/share/libtool"
-  aclocaldir="/opt/toolchains/crosstools-arm-gcc-9.2-linux-4.19-glibc-2.30-binutils-2.32/share/aclocal"
+  prefix="/home/defjovi/temp3/toolchain/crosstools-arm-gcc-9.2-linux-4.19-glibc-2.30-binutils-2.32"
+  datadir="/home/defjovi/temp3/toolchain/crosstools-arm-gcc-9.2-linux-4.19-glibc-2.30-binutils-2.32/share"
+  pkgauxdir="/home/defjovi/temp3/toolchain/crosstools-arm-gcc-9.2-linux-4.19-glibc-2.30-binutils-2.32/share/libtool/build-aux"
+  pkgltdldir="/home/defjovi/temp3/toolchain/crosstools-arm-gcc-9.2-linux-4.19-glibc-2.30-binutils-2.32/share/libtool"
+  aclocaldir="/home/defjovi/temp3/toolchain/crosstools-arm-gcc-9.2-linux-4.19-glibc-2.30-binutils-2.32/share/aclocal"
 
   # Allow the user to override the master libtoolize repository:
   if test -n "$_lt_pkgdatadir"; then

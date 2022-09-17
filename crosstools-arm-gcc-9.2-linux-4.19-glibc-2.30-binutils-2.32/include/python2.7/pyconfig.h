@@ -153,7 +153,7 @@
 #define HAVE_CURSES_IMMEDOK 1
 
 /* Define if you have the 'is_pad' function or macro. */
-/* #undef HAVE_CURSES_IS_PAD */
+#define HAVE_CURSES_IS_PAD 1
 
 /* Define if you have the 'is_term_resized' function. */
 #define HAVE_CURSES_IS_TERM_RESIZED 1
@@ -435,7 +435,7 @@
    and long long is available and at least as big as an off_t. You may need to
    add some flags for configuration and compilation to enable this mode. (For
    Solaris and Linux, the necessary defines are already defined.) */
-/* #undef HAVE_LARGEFILE_SUPPORT */
+#define HAVE_LARGEFILE_SUPPORT 1
 
 /* Define to 1 if you have the 'lchflags' function. */
 /* #undef HAVE_LCHFLAGS */
@@ -462,7 +462,7 @@
 #define HAVE_LIBINTL_H 1
 
 /* Define if you have the readline library (-lreadline). */
-#define HAVE_LIBREADLINE 1
+/* #undef HAVE_LIBREADLINE */
 
 /* Define to 1 if you have the `resolv' library (-lresolv). */
 /* #undef HAVE_LIBRESOLV */
@@ -585,28 +585,28 @@
 #define HAVE_REALPATH 1
 
 /* Define if you have readline 2.1 */
-#define HAVE_RL_CALLBACK 1
+/* #undef HAVE_RL_CALLBACK */
 
 /* Define if you can turn off readline's signal handling. */
-#define HAVE_RL_CATCH_SIGNAL 1
+/* #undef HAVE_RL_CATCH_SIGNAL */
 
 /* Define if you have readline 2.2 */
-#define HAVE_RL_COMPLETION_APPEND_CHARACTER 1
+/* #undef HAVE_RL_COMPLETION_APPEND_CHARACTER */
 
 /* Define if you have readline 4.0 */
-#define HAVE_RL_COMPLETION_DISPLAY_MATCHES_HOOK 1
+/* #undef HAVE_RL_COMPLETION_DISPLAY_MATCHES_HOOK */
 
 /* Define if you have readline 4.2 */
-#define HAVE_RL_COMPLETION_MATCHES 1
+/* #undef HAVE_RL_COMPLETION_MATCHES */
 
 /* Define if you have rl_completion_suppress_append */
-#define HAVE_RL_COMPLETION_SUPPRESS_APPEND 1
+/* #undef HAVE_RL_COMPLETION_SUPPRESS_APPEND */
 
 /* Define if you have readline 4.0 */
-#define HAVE_RL_PRE_INPUT_HOOK 1
+/* #undef HAVE_RL_PRE_INPUT_HOOK */
 
 /* Define if you have readline 4.0 */
-#define HAVE_RL_RESIZE_TERMINAL 1
+/* #undef HAVE_RL_RESIZE_TERMINAL */
 
 /* Define to 1 if you have the `round' function. */
 #define HAVE_ROUND 1
@@ -736,7 +736,7 @@
 #define HAVE_STRING_H 1
 
 /* Define to 1 if you have the <stropts.h> header file. */
-/* #undef HAVE_STROPTS_H */
+#define HAVE_STROPTS_H 1
 
 /* Define to 1 if `st_birthtime' is a member of `struct stat'. */
 /* #undef HAVE_STRUCT_STAT_ST_BIRTHTIME */
@@ -1048,10 +1048,10 @@
 #define SIZEOF_INT 4
 
 /* The size of `long', as computed by sizeof. */
-#define SIZEOF_LONG 8
+#define SIZEOF_LONG 4
 
 /* The size of `long double', as computed by sizeof. */
-#define SIZEOF_LONG_DOUBLE 16
+#define SIZEOF_LONG_DOUBLE 12
 
 /* The size of `long long', as computed by sizeof. */
 #define SIZEOF_LONG_LONG 8
@@ -1063,22 +1063,22 @@
 #define SIZEOF_PID_T 4
 
 /* The size of `pthread_t', as computed by sizeof. */
-#define SIZEOF_PTHREAD_T 8
+#define SIZEOF_PTHREAD_T 4
 
 /* The size of `short', as computed by sizeof. */
 #define SIZEOF_SHORT 2
 
 /* The size of `size_t', as computed by sizeof. */
-#define SIZEOF_SIZE_T 8
+#define SIZEOF_SIZE_T 4
 
 /* The size of `time_t', as computed by sizeof. */
-#define SIZEOF_TIME_T 8
+#define SIZEOF_TIME_T 4
 
 /* The size of `uintptr_t', as computed by sizeof. */
-#define SIZEOF_UINTPTR_T 8
+#define SIZEOF_UINTPTR_T 4
 
 /* The size of `void *', as computed by sizeof. */
-#define SIZEOF_VOID_P 8
+#define SIZEOF_VOID_P 4
 
 /* The size of `wchar_t', as computed by sizeof. */
 #define SIZEOF_WCHAR_T 4
@@ -1131,7 +1131,7 @@
 /* #undef USE_TOOLBOX_OBJECT_GLUE */
 
 /* Define if a va_list is an array of some kind */
-#define VA_LIST_IS_ARRAY 1
+/* #undef VA_LIST_IS_ARRAY */
 
 /* Define if you want SIGFPE handled (see Include/pyfpe.h). */
 /* #undef WANT_SIGFPE_HANDLER */
@@ -1183,7 +1183,7 @@
 #endif
 
 /* Define if arithmetic is subject to x87-style double rounding issue */
-/* #undef X87_DOUBLE_ROUNDING */
+#define X87_DOUBLE_ROUNDING 1
 
 /* Define on OpenBSD to activate all library features */
 /* #undef _BSD_SOURCE */

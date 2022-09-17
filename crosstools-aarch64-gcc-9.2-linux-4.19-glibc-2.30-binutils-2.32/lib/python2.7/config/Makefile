@@ -28,17 +28,17 @@ MODLIBS=        $(LOCALMODLIBS) $(BASEMODLIBS)
 VERSION=	2.7
 srcdir=		.
 
-abs_srcdir=	/opt/toolchains/toolbuild/src/buildroot-2019.11.1/output/build/host-python-2.7.17
-abs_builddir=	/opt/toolchains/toolbuild/src/buildroot-2019.11.1/output/build/host-python-2.7.17
-build=		x86_64-pc-linux-gnu
-host=		x86_64-pc-linux-gnu
+abs_srcdir=	/home/defjovi/temp3/src/buildroot-2019.11.1/output/build/host-python-2.7.17
+abs_builddir=	/home/defjovi/temp3/src/buildroot-2019.11.1/output/build/host-python-2.7.17
+build=		i686-pc-linux-gnu
+host=		i686-pc-linux-gnu
 
-CC=		/auto/work/joel/local/bin/gcc -pthread
-CXX=		/auto/work/joel/local/bin/g++ -pthread
+CC=		/usr/bin/gcc -pthread
+CXX=		/usr/bin/g++ -pthread
 MAINCC=		$(CC)
 LINKCC=		$(PURIFY) $(MAINCC)
-AR=		/tools/bin/ar
-RANLIB=		/tools/bin/ranlib
+AR=		/usr/bin/ar
+RANLIB=		/usr/bin/ranlib
 GITVERSION=	
 GITTAG=		
 GITBRANCH=	
@@ -57,7 +57,7 @@ SHELL=		/bin/sh
 LN=		ln
 
 # Portable install script (configure doesn't always guess right)
-INSTALL=	/tools/bin/install -c
+INSTALL=	/usr/bin/install -c
 INSTALL_PROGRAM=${INSTALL}
 INSTALL_SCRIPT= ${INSTALL}
 INSTALL_DATA=	${INSTALL} -m 644
@@ -73,12 +73,12 @@ MAKESETUP=      $(srcdir)/Modules/makesetup
 # Compiler options
 OPT=		-DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes
 BASECFLAGS=	 -fno-strict-aliasing
-CFLAGS=		$(BASECFLAGS) -O2 -I/opt/toolchains/crosstools-aarch64-gcc-9.2-linux-4.19-glibc-2.30-binutils-2.32/include $(OPT) $(EXTRA_CFLAGS)
+CFLAGS=		$(BASECFLAGS) -O2 -I/home/defjovi/temp3/toolchain/crosstools-aarch64-gcc-9.2-linux-4.19-glibc-2.30-binutils-2.32/include $(OPT) $(EXTRA_CFLAGS)
 # Both CPPFLAGS and LDFLAGS need to contain the shell's value for setup.py to
 # be able to build extension modules using the directories specified in the
 # environment variables
-CPPFLAGS=	-I. -IInclude -I$(srcdir)/Include -I/opt/toolchains/crosstools-aarch64-gcc-9.2-linux-4.19-glibc-2.30-binutils-2.32/include
-LDFLAGS=	-L/opt/toolchains/crosstools-aarch64-gcc-9.2-linux-4.19-glibc-2.30-binutils-2.32/lib -Wl,-rpath,/opt/toolchains/crosstools-aarch64-gcc-9.2-linux-4.19-glibc-2.30-binutils-2.32/lib -Wl,--enable-new-dtags
+CPPFLAGS=	-I. -IInclude -I$(srcdir)/Include -I/home/defjovi/temp3/toolchain/crosstools-aarch64-gcc-9.2-linux-4.19-glibc-2.30-binutils-2.32/include
+LDFLAGS=	-L/home/defjovi/temp3/toolchain/crosstools-aarch64-gcc-9.2-linux-4.19-glibc-2.30-binutils-2.32/lib -Wl,-rpath,/home/defjovi/temp3/toolchain/crosstools-aarch64-gcc-9.2-linux-4.19-glibc-2.30-binutils-2.32/lib -Wl,--enable-new-dtags
 LDLAST=		
 SGI_ABI=	
 CCSHARED=	-fPIC
@@ -94,10 +94,10 @@ PY_CFLAGS=	$(CFLAGS) $(CPPFLAGS) $(CFLAGSFORSHARED) -DPy_BUILD_CORE
 MACHDEP=	linux2
 
 # Multiarch directory (may be empty)
-MULTIARCH=	
+MULTIARCH=	i386-linux-gnu
 
 # Install prefix for architecture-independent files
-prefix=		/opt/toolchains/crosstools-aarch64-gcc-9.2-linux-4.19-glibc-2.30-binutils-2.32
+prefix=		/home/defjovi/temp3/toolchain/crosstools-aarch64-gcc-9.2-linux-4.19-glibc-2.30-binutils-2.32
 
 # Install prefix for architecture-dependent files
 exec_prefix=	${prefix}
@@ -147,7 +147,7 @@ MACOSX_DEPLOYMENT_TARGET=
 OTHER_LIBTOOL_OPT=
 
 # Environment to run shared python without installed libraries
-RUNSHARED=       LD_LIBRARY_PATH=/opt/toolchains/toolbuild/src/buildroot-2019.11.1/output/build/host-python-2.7.17
+RUNSHARED=       LD_LIBRARY_PATH=/home/defjovi/temp3/src/buildroot-2019.11.1/output/build/host-python-2.7.17:/opt/toolchains/crosstools-aarch64-gcc-9.2-linux-4.19-glibc-2.30-binutils-2.32/usr/lib
 
 # ensurepip options
 ENSUREPIP=      no
@@ -159,7 +159,7 @@ EXEMODE=	755
 FILEMODE=	644
 
 # configure script arguments
-CONFIG_ARGS=	 '--prefix=/opt/toolchains/crosstools-aarch64-gcc-9.2-linux-4.19-glibc-2.30-binutils-2.32' '--sysconfdir=/opt/toolchains/crosstools-aarch64-gcc-9.2-linux-4.19-glibc-2.30-binutils-2.32/etc' '--localstatedir=/opt/toolchains/crosstools-aarch64-gcc-9.2-linux-4.19-glibc-2.30-binutils-2.32/var' '--enable-shared' '--disable-static' '--disable-gtk-doc' '--disable-gtk-doc-html' '--disable-doc' '--disable-docs' '--disable-documentation' '--disable-debug' '--with-xmlto=no' '--with-fop=no' '--disable-nls' '--disable-dependency-tracking' '--enable-static' '--without-cxx-main' '--disable-sqlite3' '--disable-tk' '--with-expat=system' '--disable-curses' '--disable-codecs-cjk' '--disable-nis' '--enable-unicodedata' '--disable-dbm' '--disable-gdbm' '--disable-bsddb' '--disable-test-modules' '--disable-bz2' '--disable-ossaudiodev' '--disable-pyo-build' '--disable-ssl' 'CC=/auto/work/joel/local/bin/gcc' 'CFLAGS=-O2 -I/opt/toolchains/crosstools-aarch64-gcc-9.2-linux-4.19-glibc-2.30-binutils-2.32/include' 'LDFLAGS=-L/opt/toolchains/crosstools-aarch64-gcc-9.2-linux-4.19-glibc-2.30-binutils-2.32/lib -Wl,-rpath,/opt/toolchains/crosstools-aarch64-gcc-9.2-linux-4.19-glibc-2.30-binutils-2.32/lib -Wl,--enable-new-dtags' 'CPPFLAGS=-I/opt/toolchains/crosstools-aarch64-gcc-9.2-linux-4.19-glibc-2.30-binutils-2.32/include' 'CPP=/auto/work/joel/local/bin/cpp' 'PKG_CONFIG=/opt/toolchains/crosstools-aarch64-gcc-9.2-linux-4.19-glibc-2.30-binutils-2.32/bin/pkg-config' 'PKG_CONFIG_LIBDIR=/opt/toolchains/crosstools-aarch64-gcc-9.2-linux-4.19-glibc-2.30-binutils-2.32/lib/pkgconfig:/opt/toolchains/crosstools-aarch64-gcc-9.2-linux-4.19-glibc-2.30-binutils-2.32/share/pkgconfig'
+CONFIG_ARGS=	 '--prefix=/home/defjovi/temp3/toolchain/crosstools-aarch64-gcc-9.2-linux-4.19-glibc-2.30-binutils-2.32' '--sysconfdir=/home/defjovi/temp3/toolchain/crosstools-aarch64-gcc-9.2-linux-4.19-glibc-2.30-binutils-2.32/etc' '--localstatedir=/home/defjovi/temp3/toolchain/crosstools-aarch64-gcc-9.2-linux-4.19-glibc-2.30-binutils-2.32/var' '--enable-shared' '--disable-static' '--disable-gtk-doc' '--disable-gtk-doc-html' '--disable-doc' '--disable-docs' '--disable-documentation' '--disable-debug' '--with-xmlto=no' '--with-fop=no' '--disable-nls' '--disable-dependency-tracking' '--enable-static' '--without-cxx-main' '--disable-sqlite3' '--disable-tk' '--with-expat=system' '--disable-curses' '--disable-codecs-cjk' '--disable-nis' '--enable-unicodedata' '--disable-dbm' '--disable-gdbm' '--disable-bsddb' '--disable-test-modules' '--disable-bz2' '--disable-ossaudiodev' '--disable-pyo-build' '--disable-ssl' 'CC=/usr/bin/gcc' 'CFLAGS=-O2 -I/home/defjovi/temp3/toolchain/crosstools-aarch64-gcc-9.2-linux-4.19-glibc-2.30-binutils-2.32/include' 'LDFLAGS=-L/home/defjovi/temp3/toolchain/crosstools-aarch64-gcc-9.2-linux-4.19-glibc-2.30-binutils-2.32/lib -Wl,-rpath,/home/defjovi/temp3/toolchain/crosstools-aarch64-gcc-9.2-linux-4.19-glibc-2.30-binutils-2.32/lib -Wl,--enable-new-dtags' 'CPPFLAGS=-I/home/defjovi/temp3/toolchain/crosstools-aarch64-gcc-9.2-linux-4.19-glibc-2.30-binutils-2.32/include' 'CPP=/usr/bin/cpp' 'PKG_CONFIG=/home/defjovi/temp3/toolchain/crosstools-aarch64-gcc-9.2-linux-4.19-glibc-2.30-binutils-2.32/bin/pkg-config' 'PKG_CONFIG_LIBDIR=/home/defjovi/temp3/toolchain/crosstools-aarch64-gcc-9.2-linux-4.19-glibc-2.30-binutils-2.32/lib/pkgconfig:/home/defjovi/temp3/toolchain/crosstools-aarch64-gcc-9.2-linux-4.19-glibc-2.30-binutils-2.32/share/pkgconfig'
 
 # disabled extensions
 DISABLED_EXTENSIONS=	 _sqlite3 _codecs_kr _codecs_jp _codecs_cn _codecs_tw _codecs_hk nis _ssl bz2 dbm gdbm _bsddb _tkinter _curses _curses_panel ossaudiodev
@@ -205,7 +205,7 @@ BUILDPYTHON=	python$(BUILDEXE)
 PYTHON_FOR_REGEN=python2.7
 PYTHON_FOR_BUILD=./$(BUILDPYTHON) -E
 _PYTHON_HOST_PLATFORM=
-HOST_GNU_TYPE=  x86_64-pc-linux-gnu
+HOST_GNU_TYPE=  i686-pc-linux-gnu
 
 # Tcl and Tk config info from --with-tcltk-includes and -libs options
 TCLTK_INCLUDES=	

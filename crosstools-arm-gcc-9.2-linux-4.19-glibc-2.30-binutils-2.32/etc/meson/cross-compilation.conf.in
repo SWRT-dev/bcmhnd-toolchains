@@ -4,11 +4,11 @@
 # - Buildroot's 'target' is Meson's 'host'
 
 [binaries]
-c = '/opt/toolchains/crosstools-arm-gcc-9.2-linux-4.19-glibc-2.30-binutils-2.32/bin/arm-buildroot-linux-gnueabi-gcc'
-cpp = '/opt/toolchains/crosstools-arm-gcc-9.2-linux-4.19-glibc-2.30-binutils-2.32/bin/arm-buildroot-linux-gnueabi-g++'
-ar = '/opt/toolchains/crosstools-arm-gcc-9.2-linux-4.19-glibc-2.30-binutils-2.32/bin/arm-buildroot-linux-gnueabi-ar'
-strip = '/opt/toolchains/crosstools-arm-gcc-9.2-linux-4.19-glibc-2.30-binutils-2.32/bin/arm-buildroot-linux-gnueabi-strip'
-pkgconfig = '/opt/toolchains/crosstools-arm-gcc-9.2-linux-4.19-glibc-2.30-binutils-2.32/usr/bin/pkg-config'
+c = '/home/defjovi/temp3/toolchain/crosstools-arm-gcc-9.2-linux-4.19-glibc-2.30-binutils-2.32/bin/arm-buildroot-linux-gnueabi-gcc'
+cpp = '/home/defjovi/temp3/toolchain/crosstools-arm-gcc-9.2-linux-4.19-glibc-2.30-binutils-2.32/bin/arm-buildroot-linux-gnueabi-g++'
+ar = '/home/defjovi/temp3/toolchain/crosstools-arm-gcc-9.2-linux-4.19-glibc-2.30-binutils-2.32/bin/arm-buildroot-linux-gnueabi-ar'
+strip = '/home/defjovi/temp3/toolchain/crosstools-arm-gcc-9.2-linux-4.19-glibc-2.30-binutils-2.32/bin/arm-buildroot-linux-gnueabi-strip'
+pkgconfig = '/home/defjovi/temp3/toolchain/crosstools-arm-gcc-9.2-linux-4.19-glibc-2.30-binutils-2.32/usr/bin/pkg-config'
 
 [properties]
 needs_exe_wrapper = true

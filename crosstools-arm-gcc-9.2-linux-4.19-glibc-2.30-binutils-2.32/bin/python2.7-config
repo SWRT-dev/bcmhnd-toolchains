@@ -20,7 +20,7 @@ installed_prefix ()
 	echo $RESULT
 }
 
-prefix_build="/opt/toolchains/crosstools-arm-gcc-9.2-linux-4.19-glibc-2.30-binutils-2.32"
+prefix_build="/home/defjovi/temp3/toolchain/crosstools-arm-gcc-9.2-linux-4.19-glibc-2.30-binutils-2.32"
 prefix_real=$(installed_prefix "$0")
 
 # Use sed to fix paths from their built to locations to their installed to locations.
@@ -29,7 +29,7 @@ exec_prefix_build="${prefix}"
 exec_prefix=$(echo "$exec_prefix_build" | sed "s#$exec_prefix_build#$prefix_real#")
 includedir=$(echo "${prefix}/include")
 libdir=$(echo "${exec_prefix}/lib" | sed "s#$prefix_build#$prefix_real#")
-CFLAGS=$(echo "-O2 -I/opt/toolchains/crosstools-arm-gcc-9.2-linux-4.19-glibc-2.30-binutils-2.32/include" | sed "s#$prefix_build#$prefix_real#")
+CFLAGS=$(echo "-O2 -I/home/defjovi/temp3/toolchain/crosstools-arm-gcc-9.2-linux-4.19-glibc-2.30-binutils-2.32/include" | sed "s#$prefix_build#$prefix_real#")
 VERSION="2.7"
 LIBM="-lm"
 LIBC=""
@@ -42,7 +42,7 @@ OPT="-DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes"
 PY_ENABLE_SHARED="1"
 LDVERSION="@LDVERSION@"
 LIBDEST=${prefix}/lib/python${VERSION}
-LIBPL=$(echo "/opt/toolchains/crosstools-arm-gcc-9.2-linux-4.19-glibc-2.30-binutils-2.32/lib/python2.7/config" | sed "s#$prefix_build#$prefix_real#")
+LIBPL=$(echo "/home/defjovi/temp3/toolchain/crosstools-arm-gcc-9.2-linux-4.19-glibc-2.30-binutils-2.32/lib/python2.7/config" | sed "s#$prefix_build#$prefix_real#")
 SO=".so"
 PYTHONFRAMEWORK=""
 INCDIR="-I$includedir/python${VERSION}"

@@ -1,4 +1,4 @@
-#! /usr/local/bin/perl -w
+#! /usr/bin/perl -w
 # -*- perl -*-
 # Generated from autoupdate.in; do not edit by hand.
 
@@ -21,12 +21,12 @@
 # Originally written by David MacKenzie <djm@gnu.ai.mit.edu>.
 # Rewritten by Akim Demaille <akim@freefriends.org>.
 
-eval 'case $# in 0) exec /usr/local/bin/perl -S "$0";; *) exec /usr/local/bin/perl -S "$0" "$@";; esac'
+eval 'case $# in 0) exec /usr/bin/perl -S "$0";; *) exec /usr/bin/perl -S "$0" "$@";; esac'
     if 0;
 
 BEGIN
 {
-  my $pkgdatadir = $ENV{'autom4te_perllibdir'} || '/opt/toolchains/crosstools-arm-gcc-9.2-linux-4.19-glibc-2.30-binutils-2.32/share/autoconf';
+  my $pkgdatadir = $ENV{'autom4te_perllibdir'} || '/home/defjovi/temp3/toolchain/crosstools-arm-gcc-9.2-linux-4.19-glibc-2.30-binutils-2.32/share/autoconf';
   unshift @INC, $pkgdatadir;
 
   # Override SHELL.  On DJGPP SHELL may not be set to a shell
@@ -46,14 +46,14 @@ use File::Basename;
 use strict;
 
 # Lib files.
-my $autom4te = $ENV{'AUTOM4TE'} || '/opt/toolchains/crosstools-arm-gcc-9.2-linux-4.19-glibc-2.30-binutils-2.32/bin/autom4te';
+my $autom4te = $ENV{'AUTOM4TE'} || '/home/defjovi/temp3/toolchain/crosstools-arm-gcc-9.2-linux-4.19-glibc-2.30-binutils-2.32/bin/autom4te';
 my $autoconf = "$autom4te --language=autoconf";
 # We need to find m4sugar.
 my @prepend_include;
-my @include = ('/opt/toolchains/crosstools-arm-gcc-9.2-linux-4.19-glibc-2.30-binutils-2.32/share/autoconf');
+my @include = ('/home/defjovi/temp3/toolchain/crosstools-arm-gcc-9.2-linux-4.19-glibc-2.30-binutils-2.32/share/autoconf');
 my $force = 0;
 # m4.
-my $m4 = $ENV{"M4"} || '/opt/toolchains/crosstools-arm-gcc-9.2-linux-4.19-glibc-2.30-binutils-2.32/bin/m4';
+my $m4 = $ENV{"M4"} || '/home/defjovi/temp3/toolchain/crosstools-arm-gcc-9.2-linux-4.19-glibc-2.30-binutils-2.32/bin/m4';
 
 
 # $HELP

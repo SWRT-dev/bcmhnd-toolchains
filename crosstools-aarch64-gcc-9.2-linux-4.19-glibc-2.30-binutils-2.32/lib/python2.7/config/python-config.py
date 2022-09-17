@@ -1,4 +1,4 @@
-#!/opt/toolchains/crosstools-aarch64-gcc-9.2-linux-4.19-glibc-2.30-binutils-2.32/bin/python2.7
+#!/home/defjovi/temp3/toolchain/crosstools-aarch64-gcc-9.2-linux-4.19-glibc-2.30-binutils-2.32/bin/python2.7
 
 import sys
 import os

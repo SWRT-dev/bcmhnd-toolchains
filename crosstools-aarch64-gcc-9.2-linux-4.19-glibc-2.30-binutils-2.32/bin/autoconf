@@ -398,7 +398,7 @@ exit_missing_arg='
 # restore font-lock: '
 
 # Variables.
-: ${AUTOM4TE='/opt/toolchains/crosstools-aarch64-gcc-9.2-linux-4.19-glibc-2.30-binutils-2.32/bin/autom4te'}
+: ${AUTOM4TE='/home/defjovi/temp3/toolchain/crosstools-aarch64-gcc-9.2-linux-4.19-glibc-2.30-binutils-2.32/bin/autom4te'}
 autom4te_options=
 outfile=
 verbose=false
